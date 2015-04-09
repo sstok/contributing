@@ -1,6 +1,10 @@
 Symfony
 =======
 
+Symfony already has a set [Best Practices], if you are new to Symfony
+you are strongly encouraged to follow these [Best Practices] before
+starting with these guidelines.
+
 * Avoid `member` and `collection` routes.
 * Name date columns with `_on` suffixes.
 * Name datetime columns with `_at` suffixes.
@@ -13,12 +17,14 @@ Symfony
 * Store (compiled) assets in the web/ directory.
 * Avoid using Assetic for assets management.
   Use Bower and Gulp/Grunt instead.
+  
+[Best Practices]: http://symfony.com/doc/current/best_practices/index.html
 
 Controllers
 -----------
 
 * Keep controllers thin, keep as much logic in services.
-* Prefer to use ActionControllers (one action per controller)
+* Prefer to use Action Controllers (one action per controller)
   rather then one controller per resource.
 * Don't inject the ServiceContainer, but use explicit service injection
   and use helper classes for big DI injection (service-provider) with
@@ -51,12 +57,13 @@ Security
 --------
 
 * Use bcrypt for password encoding.
-* Use constant timing comparison for tokens.
+* Use constant timing comparison for (security) tokens.
 * For fine-grained restrictions, define a custom security voter.
-* Unless there is two legitimately different authentication systems and users
-  (e.g. form login for the main site and a token system for API only),
+* Unless there are two legitimately different authentication and user systems
+  (e.g. a form login for the main site and a token system for a REST API),
   use only one firewall entry with the anonymous key enabled.
-* For protecting broad URL patterns, use access_control;
+* For protecting broad URL patterns, use access_control.
+* Always perform the authentication using SSL (when available).
 
 Services
 --------
@@ -64,22 +71,10 @@ Services
 * A service name contains groups, separated by dots.
 * Use lowercase letters for service and parameter names.
 * The DI alias of the bundle is the first group (e.g. `rollerworks_user`).
-* If the bundle is a so-called AppBundle, then use `app` instead.
+* If the bundle is an AppBundle, then use `app` instead.
 * A group name uses the underscore notation.
 * Avoid using a corresponding parameter containing the class name
-  `service_name.class`, unless the service is be configurable.
-
-Migrations
-----------
-
-[Sample](migration.rb)
-
-* Set an empty string as the default constraint for non-required string and text
-  fields. [Example][default example].
-* List timestamps first when creating a new table. [Example][timestamps example].
-
-[timestamps example]: migration.rb
-[default example]: migration.rb#L6
+  `service_name.class`, unless the service-class must be changeable.
 
 Routes
 ------

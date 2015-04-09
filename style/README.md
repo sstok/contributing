@@ -1,7 +1,10 @@
 Style
 =====
 
-A guide for programming in style.
+Delivering valuable features and working software are our ultimate goals.
+ 
+This style guide should be used in service of those goals, and not as an
+end in itself. Your time is valuable.
 
 In addition to the general guidelines below, we also have the following more
 detailed, language/framework-specific style guides:
@@ -41,8 +44,7 @@ Formatting
 * Use an empty line between methods.
 * Use empty lines around multi-line blocks.
 * Use spaces around operators, except for unary operators, such as `!`.
-* Use spaces after commas, after colons and semicolons, around `{` and before
-  `}`.
+* Use spaces after commas, after colons and semicolons, around `{` and before `}`.
 * Use [Unix-style line endings] (`\n`).
 * Use [uppercase for SQL key words and lowercase for SQL identifiers].
 * Use braces to indicate control structure body regardless of the number of
