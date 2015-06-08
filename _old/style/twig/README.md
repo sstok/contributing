@@ -7,4 +7,4 @@ Twig
 * When wrapping long lines, keep the method name on the same line of the
   interpolation operator and keep each method argument on its own line.
 * Prefer double quotes for attributes.
-* Use spaceless to minize ouput content (unless needed by the output format)
+* Use spaceless to minify output content (unless needed by the output format).

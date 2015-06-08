@@ -6,7 +6,7 @@ A guide for communicating within Rollerworks.
 Tickets
 -------
 
- * People assign themselves to tickets. When in doubt, do not assign a ticket to someone.
+ * People assign themselves to tickets. When in doubt, don't assign a ticket to someone.
  * Issues (not feature requests) with no feedback from the reporter for two weeks
    are automatically closed.
  * Tickets 

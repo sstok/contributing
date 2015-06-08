@@ -5,7 +5,7 @@ Symfony already has a set [Best Practices], if you are new to Symfony
 you are strongly encouraged to follow these [Best Practices] before
 starting with these guidelines.
 
-* Avoid `member` and `collection` routes.
+* Avoid `member` and `collection` routes. (WAT?)
 * Name date columns with `_on` suffixes.
 * Name datetime columns with `_at` suffixes.
 

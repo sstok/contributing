@@ -32,7 +32,7 @@ Setting up Gush
 
 Gush automates common maintainer and contributor tasks.
 Including the batch tagging of issues/pull request, merging pull requests with
-complete details and updating the copyrigth header of source files.
+complete details and updating the copyright header of source files.
 
 Gush is written in PHP but can be used with any type of project or language.
 
@@ -43,6 +43,9 @@ To install Gush run the following command:
 Then configure it for future usage using:
 
     ./gush.phar core:configure
+    
+Make sure sure to configure the GitHub adapter when you want to
+contribute to Rollerworks.
     
 Write a Feature
 ---------------
@@ -89,14 +92,13 @@ Share your branch.
 
     git push origin <branch-name>
 
-Submit a GitHub pull request with Gush (replace \<org\> with the source organization
-like "rollerscapes"):
+Submit a GitHub pull request with Gush:
 
-    ./gush.phar pull:create --org=<org>
+    ./gush.phar pull:create
 
 If you are using a fork, you need to use the following instead.
 
-    ./gush.phar pull:create --org=<org> --source-org=<your-username>
+    ./gush.phar pull:create
 
 Ask for a code review in the project's chat room.
 
@@ -144,10 +146,10 @@ View a list of new commits. View changed files.
     git log origin/master..<branch-name>
     git diff --stat origin/master
     
-* \<org\> the organization the pull request is in (like "rollerworks")
 * \<pr-number\> is number of the pull request
+* \<pr-type\> is a single word, eg: feature, bug, minor, doc, style, security.
     
-    ./gush.phar pull:merge --org=<org> <pr-nr>
+    ./gush.phar pull:merge <pr-nr> <pr-type>
 
 Delete your remote feature branch.
 
