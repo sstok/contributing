@@ -87,7 +87,16 @@ See also :doc:`best-practices`
 * Disable PHP short-tags.
 * Disallow persistent database connections.
 * Configure the proper timezone (in which the server is located).
-* Use :doc:`composer` for managing package dependencies.
+* Use `Composer`_ for managing package dependencies.
+    * Regularly update your local Composer installation.
+    * Don't add PHPUnit or tools (like php-cs-fixer) as a dev-requirement
+      but use the Phar archive instead.
+    * Always use a secure connection for downloading Composer, package information
+      and the actual package source. Never downgrade to plain HTTP!!,
+      If TLS is not available then fix this, you can't trust a package that is
+      not provided over a secure connection.
+    * Use ``composer require package-name`` or ``composer --dev require package-name`` (for dev requirements)
+      to get the best available version.
 * Avoid a hard coupling to the environment settings.
     * Do not hard code API tokens, security keys or passwords.
     * Do not rely upon the Application environment settings (except for debug),
@@ -98,3 +107,4 @@ See also :doc:`best-practices`
 .. _`PSR-2`: http://www.php-fig.org/psr/psr-2/
 .. _`PSR-4`: http://www.php-fig.org/psr/psr-4/
 .. _`PSR-5`: http://www.php-fig.org/psr/psr-5/
+.. _`Composer`: https://getcomposer.org/
