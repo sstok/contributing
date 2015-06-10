@@ -48,13 +48,50 @@ Unit Tests
 * `PhpUnit`_ should be used for integration, API acceptance and functional tests.
 * Use an integration testCase class when performing integration tests.
 * Organize the testing suite into multiple logical groups, like: formatters, processor, etc.
+* Unit test must be small, easy to understand and fast (less then a minute per test).
 * Mark performance and functional tests with ``@group performance``
   and ``@group functional`` respectively.
 * If its not part of the end-expectation, don't mock it.
     * Knowing something should (not) be executed/called is a part of the end-expectation.
         * This includes caching and callbacks/subscribers.
     * In "detail" mocking something to get a result breaks this principle.
-    
+
+Over-testing
+------------
+
+Avoid over-testing, which is best explained by the following article;
+
+.. ::
+
+    Figuring out how much unit tests you need to write, can be tricky,
+    especially if you are new to Test-Driven Development.
+
+    Some teams strive for 100% code coverage.
+    Some open source projects even announce their test coverage on their GitHub profiles
+    – as if coverage is an indicator of quality.
+
+    Coverage only measures the lines of code that are executed by the test suite.
+    It doesn’t tell you whether the outcome of the execution is actually tested,
+    let alone how valuable that test is.
+
+    Mathias Verraes 2014 - http://verraes.net/2014/12/how-much-testing-is-too-much/
+
+Tests become a problem when:
+
+* they are slow;
+* they need to be changed all the time;
+* they break often;
+* they are hard to read;
+* … or they bother you in some other way.
+
+When any of those occur, the tests need to be inspected.
+Now is the time to decide whether you want to refactor the test itself,
+or refactor the code under test, or, in some cases, remove the tests.
+
+Low-value tests are usually harmless.
+There’s no urgent need to decide upfront whether they need to be deleted.
+Trust your instinct, or in this case, your annoyance level.
+
 Don't mock type you don't own!
 ------------------------------
 
@@ -96,7 +133,7 @@ Don't mock business logic
 
 In practice Business logic includes (but is not limited) to ValueObjects, Aggregate(Root)
 Domain messages, event objects and data Models.
- 
+
 In most cases it should not be possible in the first place to mock these objects
 as they are marked final.
 
@@ -109,7 +146,7 @@ An alternative is to create builders for your value objects. One can also create
 in the test.
 
 Originally based on: https://github.com/mockito/mockito/wiki/How-to-write-good-tests
-  
+
 Test naming rules
 -----------------
 
@@ -139,13 +176,13 @@ Avoid using "is" when there is already a state indication:
 * is debug
 * in collection
 * is connected
- 
+
 Unit tests
 ~~~~~~~~~~
 
 In unit tests the test class itself always corresponds to the class
 that is being tested.
-    
+
 .. note::
 
     Because there is no hard contract (test does not describe what the subject does),
@@ -178,7 +215,7 @@ Final examples:
     * Invalid Input should fail transformation
     * Time pattern can be configured (alternatively: Time pattern is configurable)
     * Pattern can be configured
-    
+
 Specs
 ~~~~~
 
