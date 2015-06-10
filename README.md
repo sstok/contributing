@@ -1,5 +1,5 @@
-Rollerworks Contributing Guidelines
-===================================
+Contributing Guidelines
+=======================
 
 So you'd like to contribute to our project? Great!
 We love contributors!
@@ -32,7 +32,7 @@ A note on the language:
 Rendered guides
 ---------------
 
-The guides of Rollerworks are written in reStructuredText and can be
+The guides are written in reStructuredText and can be
 built into standard HTML using Sphinx. If you try to render them using
 the GitHub repository browser some information will not be properly rendered.
 
@@ -43,6 +43,17 @@ Credits
 
 These guidelines were inspired largely by [Thoughtbot guides] and the
 [Symfony Contributing guideline](http://symfony.com/doc/current/contributing/index.html).
+
+If you would like to use these guides for your own project, please do so.
+We tried to write them a neutral tone (not for one specific project or organization),
+if you (or your team) have some additional requirements you can fork the content of 
+this repository and apply your own requirements.
+
+But remember to credit the original authors (as described in the license):
+
+```markdown
+These guidelines are originally based on the [Contributing Guidelines](https://github.com/rollerworks/guides).
+```
 
 [Thoughtbot's guides]: https://github.com/thoughtbot/guides
 [ReadTheDocs]: (http://rollerworks-guides.readthedocs.org)
