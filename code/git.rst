@@ -1,6 +1,10 @@
 Git
 ===
 
+
+
+
+
 This document explains some conventions and specificities in the way we manage
 the projects code with Git.
 
