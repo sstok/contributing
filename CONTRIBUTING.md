@@ -1,10 +1,15 @@
-# Contributing
+Contributing
+------------
 
-We love pull requests. If you have something you want to add or remove,
-please open a new pull request.
+We love contributors! For more information on how you can contribute to the
+Contributing Guidelines, please read [Contributing to the Documentation]
+and notice the [Pull Request Format] that helps us merge your pull requests faster!
 
 ## Getting Feedback
 
-Since these are our guides, we want everyone at Rollerworks to see them. We have
+Since these are our guides, we want everyone at our team to see them. We have
 a lot of contributors across a lot of timezones, so we leave all PRs open for at
 least a week to get feedback from everyone.
+
+[Contributing to the Documentation]: TODO
+[Pull Request Format]: TODO
