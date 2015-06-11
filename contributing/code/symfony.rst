@@ -1,13 +1,20 @@
 Symfony
 =======
 
-    Symfony already has a set `Best Practices`_, but as these Best Practices
-    are more focused on beginners we may not follow them everywhere.
-    In the end its not whether they or we are better, but what works for
-    the project itself.
-    
+Symfony already has a set `Best Practices`_, but as these Best Practices
+are more focused on beginners we may not follow them everywhere.
+In the end its not whether they or we are better, but what works for
+the project itself.
+
 General
 -------
+
+* Prefer to use at minimum a supported long term support (LTS) version.
+* Prefer to use Twig as template engine.
+* Avoid binding a Form directly to a Domain Model.
+* Avoid a hard dependency on the ServiceContainer.
+
+[prevent tampering]: http://blog.bigbinary.com/2013/03/19/cookies-on-rails.html
 
 * Define forms as PHP classes.
 * Don't register Forms as services when they are not be to extended,
@@ -17,7 +24,7 @@ General
 * Store (compiled) assets in the web/ directory.
 * Avoid using Assetic for assets management.
   Use Bower and Gulp instead.
-  
+
 Controllers
 -----------
 
@@ -44,9 +51,16 @@ Translations
       the "menu" and "breadcrumbs".
     * search: field alias en labels for RollerworksSearch.
     * messages: translations with no specific domain.
-  
+
 Security
 --------
+
+* Know your way around in the land of PHP, web application and Symfony security. Don’t
+  trust “the framework” blindly. And when you have set up your security preventions: know
+  if and why they work.
+* Change the default session-name.
+* Prefer httponly over an unprotected cookies to [prevent tampering].
+* Invalidate session after logout.
 
 * Use bcrypt for password encoding.
 * Use constant timing comparison for (security) tokens.
@@ -67,19 +81,19 @@ Services
 * A group name uses the underscore notation.
 * Avoid using a corresponding parameter containing the class name
   ``service_name.class``, unless the service-class must be changeable.
-  
+
 .. note::
 
     At the moment there is no preferred file format (Yaml or XML)
     for defining service definitions.
-    
+
     XML is most preferred for the moment, as it supports XSD validation
     and autosuggest in most IDE's but Yaml can be typed faster.
     *Also, some PHP installations have a broken XML parser.*
-    
+
     Which ever format is chosen, it is applied consistently.
     Don't mix service definition formats within a single project.
-    
+
 Routes
 ------
 
@@ -100,6 +114,6 @@ Doctrine ORM
 * Name date columns with ``_on`` suffixes.
 * Name datetime columns with ``_at`` suffixes.
 * Don't mark Entity classes as final (this breaks lazy loading).
-* Don't hard code the EntityManager name (keep this configurable). 
+* Don't hard code the EntityManager name (keep this configurable).
 
 .. _`Best Practices`: http://symfony.com/doc/current/best_practices/index.html

@@ -52,7 +52,7 @@ this repository and apply your own requirements.
 But remember to credit the original authors (as described in the license):
 
 ```markdown
-These guidelines are originally based on the [Contributing Guidelines](https://github.com/rollerworks/guides).
+These guidelines are originally based on the [Contributing Guidelines provided by Rollerworks](https://github.com/rollerworks/guides).
 ```
 
 [Thoughtbot's guides]: https://github.com/thoughtbot/guides

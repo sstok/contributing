@@ -230,8 +230,8 @@ See also :doc:`best-practices`
       and the actual package source. Never downgrade to plain HTTP!!,
       If TLS is not available then fix this, you can't trust a package that is
       not provided over a secure connection;
-    * Use ``composer require package-name`` or ``composer --dev require package-name`` (for dev requirements)
-      to get the best available version;
+    * Use ``composer require package-name`` or ``composer --dev require package-name``
+      (for dev requirements) to get the best available version;
 
 * Avoid a hard coupling to the environment settings;
     * Do not hard code API tokens, security keys or passwords;
