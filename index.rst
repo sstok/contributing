@@ -7,4 +7,4 @@ Contributing
     code/index
     documentation/index
 
-.. include:: /contributing/map.rst.inc
+.. include:: /map.rst.inc

@@ -1,6 +1,8 @@
 Twig
 ====
 
+* Follows the the `Twig Coding Standards`_;
+
 Here's a short example containing most features described below:
 
 .. code-block:: jinja
@@ -26,8 +28,6 @@ Here's a short example containing most features described below:
 * When wrapping long lines, keep the method name on the same line of the
   interpolation operator and keep each method argument on its own line;
 
-* Prefer double quotes for attributes;
-
 * Use spaceless to minify output content (unless needed by the output format);
 
 License
@@ -35,3 +35,5 @@ License
 
 * Code is released under the MIT license, and the license block has to be
   present at the top of every Twig file, before any HTML or Twig tag.
+
+.. _`Twig Coding Standards`: http://twig.sensiolabs.org/doc/coding_standards.html

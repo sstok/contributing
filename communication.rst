@@ -85,7 +85,7 @@ Understand why the code is necessary (bug, user experience, refactoring). Then:
 Style Comments
 --------------
 
-Reviewers should comment on missed :doc:`standards`.
+Reviewers should comment on missed :doc:`/code/standards`.
 
 Example comment:
 

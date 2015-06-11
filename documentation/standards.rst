@@ -52,26 +52,34 @@ Example
 Code Examples
 -------------
 
-* The code follows the :doc:`Coding Standards </contributing/code/standards>`
+* The code follows the :doc:`Coding Standards </code/standards>`
   as well as the `Twig Coding Standards`_;
+
 * To avoid horizontal scrolling on code blocks, we prefer to break a line
   correctly if it crosses the 85th character;
+
 * When you fold one or more lines of code, place ``...`` in a comment at the point
   of the fold. These comments are: ``// ...`` (php), ``# ...`` (yaml/bash), ``{# ... #}``
   (twig), ``<!-- ... -->`` (xml/html), ``; ...`` (ini), ``...`` (text);
+
 * When you fold a part of a line, e.g. a variable value, put ``...`` (without comment)
   at the place of the fold;
+
 * Description of the folded code: (optional)
   If you fold several lines: the description of the fold can be placed after the ``...``
   If you fold only part of a line: the description can be placed before the line;
+
 * If useful to the reader, a PHP code example should start with the namespace
   declaration;
+
 * When referencing classes, be sure to show the ``use`` statements at the
   top of your code block. You don't need to show *all* ``use`` statements
   in every example, just show what is actually being used in the code block;
+
 * If useful, a ``codeblock`` should begin with a comment containing the filename
   of the file in the code block. Don't place a blank line after this comment,
   unless the next line is also a comment;
+
 * You should put a ``$`` in front of every bash line.
 
 Formats
@@ -127,7 +135,7 @@ Files and Directories
   directory").
 * When referencing file extensions explicitly, you should include a leading dot
   for every extension (e.g. "XML files use the ``.xml`` extension").
-* When you list a Symfony file/directory hierarchy, use ``your-project/`` as the
+* When you list a Framework file/directory hierarchy, use ``your-project/`` as the
   top level directory. E.g.
 
   .. code-block:: text
@@ -143,6 +151,7 @@ English Language Standards
 
 * **English Dialect**: use the United States English dialect, commonly called
   `American English`_.
+
 * **Section titles**: use a variant of the title case, where the first
   word is always capitalized and all other words are capitalized, except for
   the closed-class words (read Wikipedia article about `headings and titles`_).
@@ -150,8 +159,10 @@ English Language Standards
   E.g.: The Vitamins are in my Fresh California Raisins
 
 * **Punctuation**: avoid the use of `Serial (Oxford) Commas`_;
+
 * **Pronouns**: avoid the use of `nosism`_ and always use *you* instead of *we*.
   (i.e. avoid the first person point of view: use the second instead);
+
 * **Gender-neutral language**: when referencing a hypothetical person, such as
   *"a user with a session cookie"*, use gender-neutral pronouns (they/their/them).
   For example, instead of:
