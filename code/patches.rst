@@ -122,7 +122,7 @@ Check that the current Tests Pass
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now that the code is installed, check that all unit tests pass for your
-environment as explained in the dedicated :doc:`document <tests>`.
+environment as explained in the 'Tests' section of the projects README.md file.
 
 Step 2: Work on your Patch
 --------------------------
@@ -467,6 +467,8 @@ messages of all the commits. When you are finished, execute the push command.
 .. _ProGit:                                http://git-scm.com/book
 .. _GitHub:                                https://github.com/signup/free
 .. _`GitHub's Documentation`:              https://help.github.com/articles/ignoring-files
+.. _`Gush`:                                http://gushphp.org/
+.. _`StyleCI`:                             https://styleci.io/
 .. _travis-ci.org:                         https://travis-ci.org/
 .. _`travis-ci.org status icon`:           http://about.travis-ci.org/docs/user/status-images/
 .. _`travis-ci.org Getting Started Guide`: http://about.travis-ci.org/docs/user/getting-started/

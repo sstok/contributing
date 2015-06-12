@@ -1,10 +1,14 @@
+* **General**
+
+  * :doc:`Code Review and Communication </communication>`
+
 * **Code**
 
   * :doc:`Code Review </communication>`
   * :doc:`Patches </code/patches>`
   * :doc:`Security </code/security>`
   * :doc:`Testing </code/testing>`
-  * :doc:`Coding Standards</code/standards>`
+  * :doc:`Coding Standards </code/standards>`
   * :doc:`Symfony </code/symfony>`
   * :doc:`Twig </code/twig>`
   * :doc:`Code Conventions </code/conventions>`

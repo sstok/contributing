@@ -61,8 +61,6 @@ Over-testing
 
 Avoid over-testing, which is best explained by the following article;
 
-.. ::
-
     Figuring out how much unit tests you need to write, can be tricky,
     especially if you are new to Test-Driven Development.
 
@@ -225,7 +223,7 @@ Some examples on how to compose a spec "example" title:
 * it will throw when [condition]
 * its a [type name]
 
-Final examples:
+**Final examples:**
 
 * UserIdSpec
     * its an identity

@@ -211,3 +211,4 @@ submitting your documentation, follow these steps:
 .. _`reStructuredText Reference`: http://docutils.sourceforge.net/docs/user/rst/quickref.html
 .. _`Sphinx Markup Constructs`: http://sphinx-doc.org/markup/
 .. _`supported languages`: http://pygments.org/languages/
+.. _`documentation`: https://github.com/rollerworks/contributing

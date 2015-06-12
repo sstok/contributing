@@ -66,6 +66,14 @@ Browsers
 
 * Don't support anything lower then IE9;
 
+Language/framework specific guidelines
+--------------------------------------
+
+* :doc:`php`
+* :doc:`symfony`
+* :doc:`twig`
+* :doc:`testing`
+
 .. _`Exceptions should be exceptional`: http://www.sitepoint.com/exceptional-exceptions/
 .. _`Keep the code simple`: http://www.readability.com/~/ko2aqda2
 .. _`Tell, don't ask`: http://robots.thoughtbot.com/post/27572137956/tell-dont-ask
