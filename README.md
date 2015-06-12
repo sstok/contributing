@@ -36,7 +36,7 @@ The guides are written in reStructuredText and can be
 built into standard HTML using Sphinx. If you try to render them using
 the GitHub repository browser some information will not be properly rendered.
 
-You can view the rendered guides at [ReadTheDocs](http://rollerworks-guides.readthedocs.org)
+You can view the rendered guides at [ReadTheDocs](https://rollerworks-contributing.readthedocs.org/en/latest/)
 
 Credits
 -------
