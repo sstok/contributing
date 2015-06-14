@@ -178,7 +178,7 @@ Then create a new branch off the ``1.0`` branch to work on the bugfix:
 
     .. code-block:: bash
 
-    $ gush issue:take 1111 --base=1.0
+        $ gush issue:take 1111 --base=1.0
 
     And replace 1111 with the actual issue-number.
 
