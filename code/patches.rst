@@ -37,12 +37,11 @@ Set up your user information with your real name and a working email address:
     If you are new to Git, you are highly recommended to read the excellent and
     free `ProGit`_ book.
 
-.. tip::
+.. note::
 
     If your IDE creates configuration files inside the project's directory,
-    you can use global ``.gitignore`` file (for all projects) or
-    ``.git/info/exclude`` file (per project) to ignore them. See
-    `GitHub's documentation`_.
+    please do not add these but ignore them by adding there paths to your local
+    ``.git/info/exclude``. See `GitHub's documentation`_.
 
 .. tip::
 
@@ -73,11 +72,9 @@ Setting up Gush
 To make contributing as simple as possible it's recommended to use `Gush`_
 for opening pull-request, forking repositories and taking issues.
 
-.. ::
-
-    If you would rather use only Git this is also possible, but will require a bit
-    more work. The rest of this document uses Gush, see :doc:`patches_with_git <Submitting a Patch with Git>`
-    if you only want to use Git.
+..    If you would rather use only Git this is also possible, but will require a bit
+..    more work. The rest of this document uses Gush, see :doc:`patches_with_git <Submitting a Patch with Git>`
+..    if you only want to use Git.
 
 To install Gush read all the details at: TBD.
 
@@ -87,13 +84,13 @@ Once you have installed Gush you must configure it for future usage:
 
     $ gush core:configure
 
-Make sure sure to configure the GitHub adapter.
-That's it, you are now ready to use Gush.
+Make sure sure to configure the GitHub adapter if you want to contribute.
+That's it, you are now ready to use Gush!
 
     .. note::
 
-        The GitHub adapter requires that you have a `GitHub`_, if don't
-        have an account already then sign-up first (it's free).
+        The GitHub adapter requires that you have a `GitHub`_ account,
+        if you don't have an account already then please sign-up first (it's free).
 
 Get the Project Source Code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -155,6 +152,8 @@ Create a Topic Branch
 Each time you want to work on a patch for a bug or on an enhancement, create a
 topic branch:
 
+.. XXX This should be changed to a Gush command (to ensure the remote is up-to-date)
+
 .. code-block:: bash
 
     $ git checkout -b BRANCH_NAME master
@@ -195,7 +194,7 @@ in mind the following:
   coding :doc:`standards <standards>` (use ``git diff --check`` to check for
   trailing spaces -- also read the tip below);
 
-* Add unit tests to prove that the bug is fixed or that the new feature
+* Add :doc:`tests <testing>` to prove that the bug is fixed or that the new feature
   actually works;
 
 * Try hard to not break backward compatibility (if you must do so, try to
@@ -272,7 +271,7 @@ while to finish your changes):
     Replace ``master`` with the branch you selected previously (e.g. ``1.0``)
     if you are working on a bugfix.
 
-.. ::
+.. note::
 
     There is a pending feature request for Gush that will make updating
     your patch (pull request) much easier).
@@ -342,8 +341,8 @@ An example submission could now look as follows:
 
 .. tip::
 
-    Gush will automatically create in the description table for you,
-    all you must do is provide the answer for each question.
+    Gush will automatically ask the relevant questions,
+    and create in the description table for you.
 
 Some answers to the questions trigger some more requirements:
 
@@ -351,7 +350,8 @@ Some answers to the questions trigger some more requirements:
   issues and reference it/them in "Fixed tickets";
 
 * If you answer yes to "New feature?", you must submit a pull request to the
-  documentation and reference it under the "Doc PR" section; (only certain projects)
+  documentation and reference it under the "Doc PR" section; (only for projects
+  that use this)
 
 * If you answer yes to "BC breaks?", the patch must contain updates to the
   relevant ``CHANGELOG`` and ``UPGRADE`` files;
@@ -393,10 +393,9 @@ commit message).
 .. tip::
 
     Gush allows to use an external editor for big descriptions
-    but doesn't support adding images.
-
-    After the pull request is created you can always change the description
-    using the GitHub web application to add additional information.
+    but doesn't support adding images. After the pull request is created you
+    can always change the description using the GitHub web interface to add
+    additional information.
 
 In addition to this "code" pull request, you may also send a pull request to
 the documentation repository to update the documentation when appropriate.
@@ -410,6 +409,7 @@ patch. Before re-submitting the patch, rebase with ``upstream/master`` or
 
 .. code-block:: bash
 
+    $ git fetch upstream
     $ git rebase -f upstream/master
     $ gush branch:push --force
 
@@ -425,6 +425,7 @@ convert many commits to one commit. To do this, use the rebase command:
 
 .. code-block:: bash
 
+    $ git fetch upstream
     $ git rebase -i upstream/master
     $ gush branch:push --force
 
@@ -464,12 +465,12 @@ messages of all the commits. When you are finished, execute the push command.
 
     And replace 111 with the actual pull request number.
 
-.. _ProGit:                                http://git-scm.com/book
-.. _GitHub:                                https://github.com/signup/free
+.. _`ProGit`:                              http://git-scm.com/book
+.. _`GitHub`:                              https://github.com/signup/free
 .. _`GitHub's Documentation`:              https://help.github.com/articles/ignoring-files
 .. _`Gush`:                                http://gushphp.org/
 .. _`StyleCI`:                             https://styleci.io/
-.. _travis-ci.org:                         https://travis-ci.org/
+.. _`travis-ci.org`:                       https://travis-ci.org/
 .. _`travis-ci.org status icon`:           http://about.travis-ci.org/docs/user/status-images/
 .. _`travis-ci.org Getting Started Guide`: http://about.travis-ci.org/docs/user/getting-started/
 .. _`PSR-1`:                               http://www.php-fig.org/psr/psr-1/
